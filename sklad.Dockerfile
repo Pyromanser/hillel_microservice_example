@@ -2,13 +2,15 @@ FROM python:3.9-slim
 
 RUN apt update && apt install curl -y
 
+COPY sklad/requirements.txt /requirements.txt
+
+RUN pip install -r requirements.txt
+
 COPY wait-for-command.sh /
 
 COPY sklad app/
 
 WORKDIR app/
-
-RUN pip install -r requirements.txt
 
 EXPOSE 8000
 
