@@ -130,3 +130,7 @@ dmypy.json
 
 # IDEA
 .idea/
+
+# project specific
+shop.env
+sklad.env
